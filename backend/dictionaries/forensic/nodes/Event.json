@@ -1,0 +1,20 @@
+{
+    "$id": "Event",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Event",
+    "properties": {
+      "id": { "type": "string" },
+      "type": { "const": "Event" },
+      "name": { "type": "string" },
+      "description": { "type": "string" },
+      "color": { "const": "red" },
+      
+      "startTime": { "type": "integer", "description": "timestamp in milliseconds since epoch" },
+      "endTime": { "type": "integer", "description": "timestamp in milliseconds since epoch" },
+      "location": { "$ref": "Location" },
+      "metadata": { "$ref": "metadataSchema" }
+    },
+    "required": ["id", "type", "name", "startTime", "endTime", "metadata"]
+  }
+  

@@ -1,0 +1,20 @@
+{
+    "$id": "Organization",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Organization",
+    "properties": {
+      "id": { "type": "string" },
+      "type": { "const": "Organization" },
+      "name": { "type": "string" },
+      "description": { "type": "string" },
+      "color": { "type": "string", "const": "brown"},
+
+      "industry": { "type": "string" },
+      "foundedDate": { "type": "integer", "description": "timestamp in milliseconds since epoch" },
+      "headquartersLocation": { "$ref": "Location" },
+      "metadata": { "$ref": "metadataSchema" }
+    },
+    "required": ["id", "type", "name", "metadata"]
+}
+  

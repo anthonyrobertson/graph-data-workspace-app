@@ -1,0 +1,52 @@
+{
+    "$id": "Visited",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Visited",
+    "properties": {
+        "type": {
+            "const": "Visited"
+        },
+        "description": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "ID of a Person or Location Node"
+        },
+        "target": {
+            "type": "string",
+            "description": "ID of a Person or Location Node"
+        },
+        "metadata": {
+            "$ref": "metadataSchema"
+        },
+        "timeWindows": {
+            "type": "array",
+            "description": "start and end time of visit.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "start": {
+                        "type": "integer",
+                        "description": "The start time of the period."
+                    },
+                    "end": {
+                        "type": "integer",
+                        "description": "The end time of the period."
+                    }
+                },
+                "required": [
+                    "start",
+                    "end"
+                ]
+            }
+        }
+    },
+    "required": [
+        "type",
+        "source",
+        "target",
+        "metadata"
+    ]
+}

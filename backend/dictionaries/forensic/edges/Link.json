@@ -1,0 +1,29 @@
+{
+    "$id": "Link",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Link",
+    "properties": {
+      "type": { "const": "Link" },
+      "description": { "type": "string"},
+      "source": { "type": "string", "description": "ID of a Location or Evidence Item Node" },
+      "target": { "type": "string", "description": "ID of a Location or Evidence Item Node" },
+      "validSourceTypes": {
+        "type": "array",
+        "const": ["EvidenceItem", "Event"]
+      },
+      "validTargetTypes": {
+        "type": "array",
+        "const": ["Person", "Location", "EvidenceItem"]
+      },
+      "metadata": { "$ref": "metadataSchema" },
+
+      "linkType": {
+        "type": "string",
+        "enum": ["ownerOf", "patronOf", "sourceOfSpecimen"],
+        "description": "The link type"
+      }
+    },
+    "required": ["type", "source", "target", "linkType", "metadata"]
+  }
+  

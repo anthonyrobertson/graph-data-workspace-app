@@ -1,0 +1,25 @@
+{
+    "$id": "Employment",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Employment",
+    "properties": {
+      "type": { "const": "Employment" },
+      "description": { "type": "string" },
+      "source": { "type": "string", "description": "ID of an Organization Node" },
+      "target": { "type": "string", "description": "ID of a Person Node" },
+      "validSourceTypes": {
+        "type": "array",
+        "const": ["Organization"]
+      },
+      "validTargetTypes": {
+        "type": "array",
+        "const": ["Person"]
+      },
+      "metadata": { "$ref": "metadataSchema" },
+
+      "role": { "type": "string", "description": "Job title or role of the person." }
+    },
+    "required": ["type", "source", "target", "metadata"]
+  }
+  

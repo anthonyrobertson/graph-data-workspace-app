@@ -1,0 +1,29 @@
+{
+    "$id": "EventParticipation",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Event Participation",
+    "properties": {
+        "type": { "const": "EventParticipation" },
+        "description": { "type": "string" },
+        "source": { "type": "string", "description": "ID of an Event Node" },
+        "target": { "type": "string", "description": "ID of an Event Node" },
+        "validSourceTypes": {
+            "type": "array",
+            "const": ["Person", "Organization"]
+        },
+        "validTargetTypes": {
+            "type": "array",
+            "const": ["Event"]
+        },
+        "metadata": { "$ref": "metadataSchema" },
+        
+        "role": { 
+            "type": "string",
+            "enum": ["attendee", "wittness", "suspect", "victim", "perpretrator", "planner"],
+            "description": "Role of the person in the event (e.g., speaker, attendee)." 
+        }
+    },
+    "required": ["type", "source", "target", "role", "metadata"]
+  }
+  

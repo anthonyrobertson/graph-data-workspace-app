@@ -1,0 +1,34 @@
+{
+    "$id": "Relationship",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Relationship",
+    "properties": {
+      "type": { "const": "Relationship" },
+      "description": { "type": "string"},
+      "source": { "type": "string", "description": "ID of a Person Node" },
+      "target": { "type": "string", "description": "ID of a Person Node" },
+      "validSourceTypes": {
+        "type": "array",
+        "const": ["Person"]
+      },
+      "validTargetTypes": {
+        "type": "array",
+        "const": ["Person"]
+      },
+      "metadata": { "$ref": "metadataSchema" },
+
+      "status": {
+        "type": "string",
+        "enum": ["active", "inactive"],
+        "description": "The current status of the relationship."
+      },
+      "relationshipType": {
+        "type": "string",
+        "enum": ["friendship", "alliance", "business", "criminal", "romantic", "rivalry", "enemy", "debt"],
+        "description": "The relationship type"
+      }
+    },
+    "required": ["type", "source", "target", "relationshipType", "metadata"]
+  }
+  

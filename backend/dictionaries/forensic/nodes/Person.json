@@ -1,0 +1,20 @@
+{
+    "$id": "Person",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Person",
+    "properties": {
+      "id": { "type": "string" },
+      "type": { "const": "Person" },
+      "name": { "type": "string" },
+      "description": { "type": "string" },
+      "color": { "type": "string", "const": "blue"},
+      
+      "dateOfBirth": { "type": "integer", "description": "timestamp in milliseconds since epoch" },
+      "gender": { "type": "string", "enum": ["male", "female", "other", "unknown"] },
+      "occupation": { "type": "string" },
+      "metadata": { "$ref": "metadataSchema" }
+    },
+    "required": ["id", "type", "name", "dateOfBirth", "gender", "metadata"]
+}
+  

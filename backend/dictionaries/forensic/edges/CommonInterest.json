@@ -1,0 +1,25 @@
+{
+    "$id": "CommonInterest",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Common Interest",
+    "properties": {
+      "type": { "const": "CommonInterest" },
+      "description": { "type": "string" },
+      "source": { "type": "string", "description": "ID of a Person Node" },
+      "target": { "type": "string", "description": "ID of a Person Node" },
+      "validSourceTypes": {
+        "type": "array",
+        "const": ["Person"]
+      },
+      "validTargetTypes": {
+        "type": "array",
+        "const": ["Person"]
+      },
+      "metadata": { "$ref": "metadataSchema" },
+
+      "interest": { "type": "string", "description": "The ID of another node - the subject of the interest." }
+    },
+    "required": ["type", "source", "target", "metadata"]
+  }
+  
