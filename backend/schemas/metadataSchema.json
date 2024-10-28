@@ -1,0 +1,25 @@
+{
+    "$id": "metadataSchema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Metadata Schema",
+    "type": "object",
+    "properties": {
+        "author": {
+            "type": "string",
+            "description": "The author who created the item."
+        },
+        "created": {
+            "type": "integer",
+            "description": "The creation timestamp of the item."
+        },
+        "updated": {
+            "type": "integer",
+            "description": "The last edited timestamp of the item."
+        },
+        "version": {
+            "type": "string",
+            "description": "The version of the item."
+        }
+    },
+    "required": [ "author", "created" ]
+}
