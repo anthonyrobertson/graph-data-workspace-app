@@ -1,0 +1,89 @@
+{
+    "$id": "edgeTypeSchema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Edge Type Schema",
+    "type": "object",
+    "properties": {
+      "$id": {
+        "type": "string",
+        "description": "A unique identifier for the edge."
+      },
+      "$schema": {
+        "type": "string",
+        "description": "schema specification reference"
+      },
+      "type": {
+        "type": "string",
+        "description": "The type of the edge (e.g., Relationship, Transaction)."
+      },
+      "title": {
+        "type": "string",
+        "description": "Title of the edge type."
+      },
+      "properties": {
+        "type": "object",
+        "description": "An array of key-value pairs representing attributes of the edge.",
+        "properties": {
+          "type": { "type": "object" },
+          "description": {"const": { "type": "string" }},
+          "source": {
+            "type": "object",
+            "description": "Source information or references for the edge data."
+          },
+          "target": {
+            "type": "object",
+            "description": "Target information or references for the edge data."
+          },
+          "validSourceTypes": {
+            "type": "object",
+            "properties": {
+              "type": {"const": "array"},
+              "const": {"type": "array"}
+            },
+            "description": "Node types that are valid sources for an Edge type."
+          },
+          "validTargetTypes": {
+            "type": "object",
+            "properties": {
+              "type": {"const": "array"},
+              "const": {"type": "array"}
+            },
+            "description": "Node types that are valid targets for an Edge type."
+          },
+          "timeWindows": {
+            "type": "object",
+            "properties": {
+              "type": {"const": "array"},
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {"const": "object"},
+                  "properties": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "object",
+                        "properties": {
+                          "type": {"const": "integer"}
+                        }
+                      },
+                      "end": {
+                        "type": "object",
+                        "properties": {
+                          "type": {"const": "integer"}
+                        }
+                      }
+                    }
+                  },
+                  "required": {"const": ["start", "end"]}
+                }
+              }
+            }
+          }
+        },
+        "required": ["type", "description", "source", "target"]
+      }
+    },
+    "required": ["$id", "$schema", "type", "title"]
+  }
+  
