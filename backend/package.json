@@ -1,0 +1,20 @@
+{
+  "name": "graph-data-workspace-app",
+  "version": "1.0.0",
+  "description": "Interactive workspace for editing and visualizing graph data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.1.0"
+  }
+}
