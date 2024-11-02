@@ -8,7 +8,7 @@
       "type": { "const": "Event" },
       "name": { "type": "string" },
       "description": { "type": "string" },
-      "color": { "const": "red" },
+      "color": { "const": "#163F53" },
       
       "startTime": { "type": "integer", "description": "timestamp in milliseconds since epoch" },
       "endTime": { "type": "integer", "description": "timestamp in milliseconds since epoch" },

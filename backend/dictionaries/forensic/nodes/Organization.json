@@ -8,7 +8,7 @@
       "type": { "const": "Organization" },
       "name": { "type": "string" },
       "description": { "type": "string" },
-      "color": { "type": "string", "const": "brown"},
+      "color": { "type": "string", "const": "#FCD581"},
 
       "industry": { "type": "string" },
       "foundedDate": { "type": "integer", "description": "timestamp in milliseconds since epoch" },

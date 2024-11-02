@@ -8,7 +8,7 @@
       "type": { "const": "Location" },
       "name": { "type": "string" },
       "description": { "type": "string" },
-      "color": { "type": "string", "const": "tan"},
+      "color": { "type": "string", "const": "#3F6E3B"},
       "coordinates": {
         "type": "object",
         "properties": {

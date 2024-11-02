@@ -1,6 +1,8 @@
 # graph-data-workspace-app
 Abstract data visualization app structured around graphs
 
+![early screenshot](demo.png)
+
 JSON schema is used to define all the node and edge types ( there are meta-schemas nodeTypeSchema and edgeTypeSchema )
 
 * Node

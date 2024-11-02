@@ -18,7 +18,7 @@
         "type": "string",
         "description": "A detailed description of the evidence item."
       },
-      "color": { "type": "string", "const": "green"},
+      "color": { "type": "string", "const": "#A6808C"},
       "category": {
         "type": "string",
         "description": "The type or category of evidence item.",
