@@ -1,0 +1,43 @@
+{
+    "$id": "Supplier",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Supplier",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the supplier"
+        },
+        "type": {
+            "type": "string",
+            "const": "Supplier"
+        },
+        "description": {
+            "type": "string",
+            "description": ""
+        },
+        "color": {
+            "type": "string",
+            "const": "orange"
+        },
+        "id": {
+            "type": "string",
+            "description": "Unique identifier for the supplier"
+        },
+        "location": {
+            "type": "string",
+            "description": "Location of the supplier"
+        },
+        "supplier_type": {
+            "type": "string",
+            "description": "Type of supplier (e.g., Raw Material Provider)"
+        }
+    },
+    "required": [
+        "type",
+        "id",
+        "name",
+        "location",
+        "supplier_type"
+    ]
+}

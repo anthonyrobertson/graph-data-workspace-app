@@ -1,0 +1,43 @@
+{
+    "$id": "Product",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Product",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the product"
+        },        
+        "type": {
+            "type": "string",
+            "const": "Product"
+        },
+        "description": {
+            "type": "string",
+            "description": ""
+        },
+        "color": {
+            "type": "string",
+            "const": "blue"
+        },
+        "product_id": {
+            "type": "string",
+            "description": "Unique identifier for the product"
+        },
+        "category": {
+            "type": "string",
+            "description": "Category of the product (e.g., Machinery Part)"
+        },
+        "base_price": {
+            "type": "number",
+            "description": "Base price of the product"
+        }
+    },
+    "required": [
+        "type",
+        "product_id",
+        "name",
+        "category",
+        "base_price"
+    ]
+}

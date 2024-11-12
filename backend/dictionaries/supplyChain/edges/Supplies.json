@@ -1,0 +1,50 @@
+{
+    "$id": "Supplies",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Supplies",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "const": "Supplies"
+        },
+        "description": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "ID of the supplier node"
+        },
+        "target": {
+            "type": "string",
+            "description": "ID of the material node"
+        },
+        "validSourceTypes": {
+            "type": "array",
+            "const": [
+                "Supplier"
+            ]
+        },
+        "validTargetTypes": {
+            "type": "array",
+            "const": [
+                "Material"
+            ]
+        },
+        "price_per_unit": {
+            "type": "number",
+            "description": "Price the supplier charges per unit of material"
+        },
+        "lead_time": {
+            "type": "integer",
+            "description": "Estimated delivery time in days"
+        }
+    },
+    "required": [
+        "type",
+        "source",
+        "target",
+        "price_per_unit",
+        "lead_time"
+    ]
+}

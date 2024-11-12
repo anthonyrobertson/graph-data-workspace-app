@@ -1,0 +1,44 @@
+{
+    "$id": "Customer",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Customer",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the customer"
+        },
+        "type": {
+            "type": "string",
+            "const": "Customer",
+            "default": "Customer"
+        },
+        "description": {
+            "type": "string",
+            "description": ""
+        },
+        "color": {
+            "type": "string",
+            "const": "red"
+        },
+        "customer_id": {
+            "type": "string",
+            "description": "Unique identifier for the customer"
+        },
+        "industry": {
+            "type": "string",
+            "description": "Industry of the customer (e.g., Automotive)"
+        },
+        "location": {
+            "type": "string",
+            "description": "Location of the customer"
+        }
+    },
+    "required": [
+        "type",
+        "customer_id",
+        "name",
+        "industry",
+        "location"
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "$id": "Purchases",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Purchases",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "const": "Purchases"
+        },
+        "description": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "ID of the customer node"
+        },
+        "target": {
+            "type": "string",
+            "description": "ID of the product node"
+        },
+        "validSourceTypes": {
+            "type": "array",
+            "const": [
+                "Customer"
+            ]
+        },
+        "validTargetTypes": {
+            "type": "array",
+            "const": [
+                "Product"
+            ]
+        },
+        "order_quantity": {
+            "type": "integer",
+            "description": "Quantity the customer orders"
+        },
+        "price_paid": {
+            "type": "number",
+            "description": "Price agreed upon for the product"
+        },
+        "frequency": {
+            "type": "string",
+            "description": "Frequency of orders, e.g., 'monthly'"
+        }
+    },
+    "required": [
+        "type",
+        "source",
+        "target",
+        "order_quantity",
+        "price_paid",
+        "frequency"
+    ]
+}

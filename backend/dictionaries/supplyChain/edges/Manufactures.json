@@ -1,0 +1,50 @@
+{
+    "$id": "Manufactures",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Manufactures",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "const": "Manufactures"
+        },
+        "description": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "ID of the material node"
+        },
+        "target": {
+            "type": "string",
+            "description": "ID of the product node"
+        },
+        "validSourceTypes": {
+            "type": "array",
+            "const": [
+                "Material"
+            ]
+        },
+        "validTargetTypes": {
+            "type": "array",
+            "const": [
+                "Product"
+            ]
+        },
+        "usage_quantity": {
+            "type": "number",
+            "description": "Quantity of material required per product unit"
+        },
+        "waste_factor": {
+            "type": "number",
+            "description": "Material loss during production as a percentage"
+        }
+    },
+    "required": [
+        "type",
+        "source",
+        "target",
+        "usage_quantity",
+        "waste_factor"
+    ]
+}

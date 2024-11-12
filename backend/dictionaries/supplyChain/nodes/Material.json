@@ -1,0 +1,43 @@
+{
+    "$id": "Material",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Material",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the material"
+        },
+        "type": {
+            "type": "string",
+            "const": "Material"
+        },
+        "description": {
+            "type": "string",
+            "description": ""
+        },
+        "color": {
+            "type": "string",
+            "const": "green"
+        },
+        "material_id": {
+            "type": "string",
+            "description": "Unique identifier for the material"
+        },
+        "category": {
+            "type": "string",
+            "description": "Category of the material (e.g., Metal)"
+        },
+        "unit": {
+            "type": "string",
+            "description": "Measurement unit (e.g., kilogram)"
+        }
+    },
+    "required": [
+        "type",
+        "material_id",
+        "name",
+        "category",
+        "unit"
+    ]
+}

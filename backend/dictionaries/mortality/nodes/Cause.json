@@ -1,0 +1,22 @@
+{
+    "$id": "CauseOfMortality",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Cause of Mortality",
+    "description": "A cause of mortality",
+    "properties": {
+      "id": { "type": "string" },
+      "type": { "const": "CauseOfMortality" },
+      "name": { "type": "string" },
+      "description": { "type": "string" },
+      "color": { "type": "string", "const": "#8FBFE0"},
+      
+      "year": { "type": "integer", "description": "the calendar year YYYY" },
+      "state": { "type": "string" },
+      "deaths": { "type": "integer", "description": "Total number of deaths" },
+      "rate": { "type": "number", "description": "Age adjusted death rate for the given state" },
+      "metadata": { "$ref": "metadataSchema" }
+    },
+    "required": ["id", "type", "name", "year", "state", "deaths", "rate", "metadata"]
+}
+  
