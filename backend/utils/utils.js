@@ -1,3 +1,5 @@
+const fs = require('fs').promises;
+
 // Factory function for creating classes
 exports.createClass = function (dictionaryEntry, baseClass) {
     let abc = class AbstractBaseClass {
@@ -10,4 +12,20 @@ exports.createClass = function (dictionaryEntry, baseClass) {
     };
     abc.definition = dictionaryEntry; // stash definition for static convenience
     return abc;
+}
+
+exports.getRandomString = function (length) {
+    const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    return Array.from({ length }, () => chars.charAt(Math.floor(Math.random() * chars.length))).join('');
+}
+
+exports.loadJson = async function (filepath) {
+    try {
+      await fs.access(filepath);
+      const graphData = await fs.readFile(filepath, 'utf8');
+      return JSON.parse(graphData);
+    } catch (error) {
+      console.log(error)
+      return false;
+    }
 }

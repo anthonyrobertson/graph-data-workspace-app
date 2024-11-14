@@ -40,4 +40,4 @@ class BaseEdge {
     }
 }
 
-exports = {BaseNode, BaseEdge}
+module.exports = {BaseNode, BaseEdge}
