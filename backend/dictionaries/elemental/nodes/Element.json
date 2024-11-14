@@ -1,0 +1,128 @@
+{
+    "$id": "elementNodeSchema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Element",
+    "type": "object",
+    "properties": {
+      "$id": {
+        "type": "string",
+        "description": "An ID for the node type, representing a chemical element."
+      },
+      "$schema": {
+        "type": "string",
+        "description": "Schema specification reference."
+      },
+      "type": {
+        "type": "string",
+        "const": "object",
+        "description": "This will be 'object'."
+      },
+      "title": {
+        "type": "string",
+        "description": "A description of the node type, e.g., 'Chemical Element'."
+      },
+      "properties": {
+        "type": "object",
+        "description": "An array of key-value pairs representing attributes of the node.",
+        "properties": {
+          "name": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string", "const": "string" }
+            },
+            "required": ["type"],
+            "description": "The name of the chemical element, e.g., 'Hydrogen'."
+          },
+          "type": {
+            "type": "object",
+            "description": "The type of node, should be 'elementNodeSchema'.",
+            "properties": {
+              "type": { "type": "string", "const": "elementNodeSchema" }
+            },
+            "required": ["type"]
+          },
+          "description": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string", "const": "string" }
+            },
+            "required": ["type"],
+            "description": "A brief description of the element, e.g., 'A colorless, odorless gas'."
+          },
+          "color": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string", "const": "string" },
+              "default": "gray"
+            },
+            "required": ["type"],
+            "description": "Suggested color for visual representation, based on element category (e.g., noble gases, metals)."
+          },
+          "atomic_number": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "integer" },
+              "minimum": 1
+            },
+            "required": ["type"],
+            "description": "The atomic number of the element."
+          },
+          "atomic_mass": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "number" },
+              "minimum": 1.0079
+            },
+            "required": ["type"],
+            "description": "The atomic mass of the element."
+          },
+          "electronegativity": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "number" },
+              "minimum": 0,
+              "maximum": 4
+            },
+            "required": ["type"],
+            "description": "The electronegativity of the element (0–4 scale)."
+          },
+          "group": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "integer" },
+              "minimum": 1,
+              "maximum": 18
+            },
+            "required": ["type"],
+            "description": "The group number (column) of the periodic table where the element resides."
+          },
+          "period": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "integer" },
+              "minimum": 1,
+              "maximum": 7
+            },
+            "required": ["type"],
+            "description": "The period number (row) of the periodic table where the element resides."
+          },
+          "category": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "enum": ["metal", "non-metal", "metalloid", "noble gas", "alkali metal", "alkaline earth metal", "transition metal", "post-transition metal", "lanthanide", "actinide"]
+            },
+            "required": ["type"],
+            "description": "The category type of the element, e.g., metal, non-metal, noble gas."
+          },
+          "required": {
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "required": ["name", "type", "description", "color", "atomic_number", "atomic_mass", "electronegativity", "group", "period", "category"]
+      }
+    },
+    "required": ["$id", "$schema", "type", "title", "properties"]
+  }
+  

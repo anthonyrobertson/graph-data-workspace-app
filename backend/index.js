@@ -30,25 +30,11 @@ app.get('/schemas', async (req, res) => {
     res.json({nodeTypeSchemaJson, edgeTypeSchemaJson, metadataSchemaJson});
 });
 app.get('/dictionaries', async (req, res) => {
+    //  NOT WORKING
     res.json(await getDictionaries());
 });
 // app.get('/boards', async (req, res) => {
 //     res.json(getBoardsList);
-// });
-
-// app.get('/models', async (req, res) => {
-//     // TODO: decide what to do here
-//     const nodes = nodeClasses.map(nodeType => {
-//         const nr = {}
-//         nr[nodeType.definition.type] = nodeType.definition.attributes.map(a => a.name) // kinda boring..
-//         return nr
-//     });
-//     const edges = edgeClasses.map(edgeType => {
-//         const ner = {}
-//         ner[edgeType.definition.type] = edgeType.definition // kinda boring..
-//         return ner
-//     });
-//     res.json({nodes, edges});
 // });
 
 app.get('/graph', async (req, res) => {
@@ -78,7 +64,6 @@ app.get('/graph/:filename', async(req, res) => {
  */
 
 app.post('/graph/:filename/update', async(req, res) => {
-    
     // TODO: pre-validate the passed update
     console.log(req.body)
 
@@ -94,7 +79,6 @@ app.post('/graph/:filename/update', async(req, res) => {
         res.sendStatus(400).send(`Update failed ${error}`)
         return;
     }
-
 });
 
 
