@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Force-Directed Graph</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+        #main {
+            display: grid;
+            grid-template-columns: 500px 1fr;
+            height: 100%;
+            
+            
+
+            & #right {
+
+            }
+        }
+        #graphList {
+            a {
+                display: block;
+                padding: 7px;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                    background-color: rgb(146, 183, 252);
+                }
+            }
+        }
+        svg {
+            background: #1F211A;
+        }
+        .node {
+            /* fill: steelblue; */
+            stroke: #4b4b4b;
+            stroke-width: 1.5px;
+            cursor: pointer;
+
+            /* &[data-gender="M"], &[data-gender="male"] {
+                fill: rgb(12, 158, 255);
+            }
+            &[data-gender="F"], &[data-gender="female"] {
+                fill: rgb(88, 36, 230);
+            } */
+        }
+
+        .link {
+            stroke: #858585;
+            stroke-opacity: 0.6;
+            opacity: 0.5;
+            cursor: crosshair;
+
+            /* &[data-type="spouse"] {
+                stroke: rgb(15, 215, 241);
+            }
+            &[data-type="shared_interest"] {
+                stroke: rgb(14, 138, 160);
+            }
+            &[data-type="common_language"] {
+                stroke: rgb(0, 255, 21);
+            }
+            &[data-type="common_institution"] {
+                stroke: rgb(174, 0, 255);
+            }
+            &[data-type="friend"] {
+                stroke: rgb(255, 130, 12);
+            } */
+        }
+
+        .label {
+            font-size: 14px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div>
+            <ul><a href="http://localhost:3000/schemas">Schemas</a></ul>
+            <ul><a href="http://localhost:3000/dictionaries">Dictionaries</a></ul>
+
+            <button class="action" data-action="pause">Pause</button>
+            <button class="action" data-action="resume">Resume</button>
+            <hr>
+            <button class="action" data-action="dictionary">Dictionary</button>
+            <button class="action" data-action="edges">Generate Edges</button>
+
+            <div id="graphList"></div>
+
+            <div id="testform"></div>
+        </div>
+        <div id="right">
+            <svg width="100%" height="100%"></svg>
+        </div>
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+</html>
