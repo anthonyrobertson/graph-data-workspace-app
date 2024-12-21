@@ -1,7 +1,7 @@
 let width = 1000, height = 900;
 const _ = require('underscore');
 const {JSONEditor} = require('@json-editor/json-editor');
-
+const d3 = require('d3');
 const exampleGraph = require('./exampleGraph.json'); // a generated example
 
 let nodes = exampleGraph.nodes;
