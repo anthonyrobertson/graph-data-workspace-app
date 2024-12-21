@@ -150,14 +150,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-(async () => {
-
-    // doing it once for example, but server should support multiple simeltaneously - if used on server side
-    // await loadDictionaryFromDirectory('./dictionaries/forensic');
-    // await loadDictionaryFromDirectory('./dictionaries/supplyChain');
-    // await loadDictionaryFromDirectory('./dictionaries/interpersonal'); // babies
-    // await loadDictionaryFromDirectory('./dictionaries/mortality');
-
-    // console.log({nodeClasses, edgeClasses})
-})();
