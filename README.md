@@ -1,5 +1,12 @@
 # graph-data-workspace-app
-Graph data visualization app structured around type dictionaries.
+A graph data visualization and editing tool allowing users to create, update, and visualize graph data structures. The application uses JSON schema to define node and edge types, which are organized into dictionaries. These dictionaries provide a structured way to define the types and properties of nodes and edges in a graph.
+
+### Key Features:
+1. **Graph Visualization**: The frontend uses D3.js to visualize graph data, allowing users to interact with nodes and edges.
+2. **Graph Editing**: Users can load, update, and save graphs. The backend provides APIs to handle these operations.
+3. **Schema Validation**: The application uses JSON schema to validate the structure of graphs, nodes, and edges.
+4. **Dictionaries**: Dictionaries define the types and properties of nodes and edges, ensuring consistency and validation across graphs.
+
 
 ![early screenshot](demo.png)
 
