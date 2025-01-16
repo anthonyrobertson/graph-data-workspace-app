@@ -1,0 +1,718 @@
+{
+  "uuid": "graph-001",
+  "name": "Cookie Theft Investigation",
+  "description": "A graph representing the investigation of the cookie theft case.",
+  "dictionaryID": "./dictionaries/forensic",
+  "nodes": [
+
+    {
+      "id": "person_nicole_brown_simpson",
+      "type": "Person",
+      "name": "Nicole Brown Simpson",
+      "description": "Victim, ex-wife of O.J. Simpson, found murdered at her Brentwood condo.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -303379200000,
+      "gender": "female",
+      "occupation": "unknown",
+      "metadata": {}
+    },
+    {
+      "id": "person_ron_goldman",
+      "type": "Person",
+      "name": "Ron Goldman",
+      "description": "Victim, friend of Nicole Brown Simpson, found murdered at Bundy Drive.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -173491200000,
+      "gender": "male",
+      "occupation": "waiter",
+      "metadata": {}
+    },
+    {
+      "id": "person_oj_simpson",
+      "type": "Person",
+      "name": "O.J. Simpson",
+      "description": "Former football star and actor, accused of the murders of Nicole and Ron.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -70675200000,
+      "gender": "male",
+      "occupation": "actor and retired athlete",
+      "metadata": {}
+    },
+    {
+      "id": "person_mark_fuhrman",
+      "type": "Person",
+      "name": "Mark Fuhrman",
+      "description": "LAPD detective who discovered key evidence but became controversial during the trial.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -189216000000,
+      "gender": "male",
+      "occupation": "detective",
+      "metadata": {}
+    },
+    {
+      "id": "person_phil_vanatter",
+      "type": "Person",
+      "name": "Phil Vanatter",
+      "description": "LAPD detective, part of the team investigating the murders.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -662688000000,
+      "gender": "male",
+      "occupation": "detective",
+      "metadata": {}
+    },
+    {
+      "id": "person_tom_lange",
+      "type": "Person",
+      "name": "Tom Lange",
+      "description": "Lead LAPD detective on the case.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -441676800000,
+      "gender": "male",
+      "occupation": "detective",
+      "metadata": {}
+    },
+    {
+      "id": "person_johnnie_cochran",
+      "type": "Person",
+      "name": "Johnnie Cochran",
+      "description": "Lead defense attorney for O.J. Simpson.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -1220918400000,
+      "gender": "male",
+      "occupation": "attorney",
+      "metadata": {}
+    },
+    {
+      "id": "person_robert_shapiro",
+      "type": "Person",
+      "name": "Robert Shapiro",
+      "description": "Defense attorney on Simpson's legal team.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -1577664000000,
+      "gender": "male",
+      "occupation": "attorney",
+      "metadata": {}
+    },
+    {
+      "id": "person_f_lee_bailey",
+      "type": "Person",
+      "name": "F. Lee Bailey",
+      "description": "Renowned defense attorney on Simpson's legal team.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -1219449600000,
+      "gender": "male",
+      "occupation": "attorney",
+      "metadata": {}
+    },
+    {
+      "id": "person_robert_kardashian",
+      "type": "Person",
+      "name": "Robert Kardashian",
+      "description": "Defense attorney and close friend of O.J. Simpson.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -1410480000000,
+      "gender": "male",
+      "occupation": "attorney",
+      "metadata": {}
+    },
+    {
+      "id": "person_kris_jenner",
+      "type": "Person",
+      "name": "Kris Jenner",
+      "description": "Close friend of Nicole Brown Simpson.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -3150000000,
+      "gender": "male",
+      "occupation": "attorney",
+      "metadata": {}
+    },
+    {
+      "id": "person_marcia_clark",
+      "type": "Person",
+      "name": "Marcia Clark",
+      "description": "Lead prosecutor in the case.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -400320000000,
+      "gender": "female",
+      "occupation": "prosecutor",
+      "metadata": {}
+    },
+    {
+      "id": "person_christopher_darden",
+      "type": "Person",
+      "name": "Christopher Darden",
+      "description": "Co-prosecutor in the case.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -252288000000,
+      "gender": "male",
+      "occupation": "prosecutor",
+      "metadata": {}
+    },
+    {
+      "id": "person_kato_kaelin",
+      "type": "Person",
+      "name": "Kato Kaelin",
+      "description": "O.J. Simpson's houseguest and witness.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -216216000000,
+      "gender": "male",
+      "occupation": "actor",
+      "metadata": {}
+    },
+    {
+      "id": "person_allan_park",
+      "type": "Person",
+      "name": "Allan Park",
+      "description": "Limousine driver who provided key testimony.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -178675200000,
+      "gender": "male",
+      "occupation": "driver",
+      "metadata": {}
+    },
+    {
+      "id": "person_denise_brown",
+      "type": "Person",
+      "name": "Denise Brown",
+      "description": "Nicole Brown Simpson’s sister, a witness in the trial.",
+      "color": "#8FBFE0",
+      "dateOfBirth": -536112000000,
+      "gender": "female",
+      "occupation": "unknown",
+      "metadata": {}
+    },
+    {
+      "id": "person_arnelle_simpson",
+      "type": "Person",
+      "name": "Arnelle Simpson",
+      "description": "O.J. Simpson's daughter, a witness in the trial.",
+      "color": "#8FBFE0",
+      "dateOfBirth": 315532
+    },
+  
+    {
+        "id": "1",
+        "name": "O.J. Simpson's House",
+        "address": "360 North Rockingham Avenue, Brentwood, Los Angeles, CA",
+        "type": "Location",
+        "description": "The home of O.J. Simpson, where he lived during the time of the murders."
+    },
+    {
+        "id": "2",
+        "name": "Nicole Brown Simpson's Condo",
+        "address": "875 South Bundy Drive, Brentwood, Los Angeles, CA",
+        "type": "Location",
+        "description": "The home of Nicole Brown Simpson, where she and Ronald Goldman were found murdered."
+    },
+    {
+        "id": "3",
+        "name": "Mezzaluna Restaurant",
+        "address": "11750 San Vicente Blvd, Brentwood, Los Angeles, CA",
+        "type": "Location",
+        "description": "The restaurant where Ronald Goldman worked and where Nicole Brown Simpson had her last meal."
+    },
+
+    {
+        "id": "5",
+        "name": "Los Angeles County Superior Courthouse",
+        "address": "111 North Hill Street, Los Angeles, CA",
+        "type": "Location",
+        "description": "The courthouse where O.J. Simpson's trial took place."
+    },
+
+    {
+        "id": "9",
+        "name": "Brentwood School",
+        "address": "100 South Barrington Place, Los Angeles, CA",
+        "type": "Location",
+        "description": "The private school attended by Nicole Brown Simpson's children."
+    },
+    {
+        "id": "10",
+        "name": "Gretna Green Way",
+        "address": "Brentwood, Los Angeles, CA",
+        "type": "Location",
+        "description": "The street where O.J. Simpson's houseguest, Kato Kaelin, heard thumps on the night of the murders."
+    },
+    {
+        "id": "13",
+        "name": "Brentwood Country Club",
+        "address": "590 South Burlingame Avenue, Los Angeles, CA",
+        "type": "Location",
+        "description": "The country club where O.J. Simpson played golf on the morning of the murders."
+    },
+
+
+    {
+      "id": "evidence_bloody_glove",
+      "type": "EvidenceItem",
+      "name": "Bloody Glove",
+      "description": "A bloodstained glove found at O.J. Simpson's property.",
+      "color": "#A6808C",
+      "category": "Biological Sample",
+      "collectedBy": "Mark Fuhrman",
+      "collectedDate": 772262400000,
+      "locationID": "location_simpson_property",
+      "status": "In Storage",
+      "condition": "Intact",
+      "relatedCrime": "crime_bundy_murders",
+      "associatedPersons": [
+        "person_nicole_brown_simpson",
+        "person_ron_goldman",
+        "person_oj_simpson"
+      ]
+    },
+    {
+      "id": "evidence_blood_trail",
+      "type": "EvidenceItem",
+      "name": "Blood Trail",
+      "description": "A trail of blood leading from the crime scene to O.J. Simpson's Bronco.",
+      "color": "#A6808C",
+      "category": "Biological Sample",
+      "collectedBy": "Phil Vanatter",
+      "collectedDate": 772262400000,
+      "locationID": "location_bundy_drive",
+      "status": "In Storage",
+      "condition": "Intact",
+      "relatedCrime": "crime_bundy_murders",
+      "associatedPersons": [
+        "person_oj_simpson",
+        "person_nicole_brown_simpson",
+        "person_ron_goldman"
+      ]
+    },
+    {
+      "id": "evidence_bloody_sock",
+      "type": "EvidenceItem",
+      "name": "Bloody Sock",
+      "description": "A bloodstained sock found in O.J. Simpson's bedroom.",
+      "color": "#A6808C",
+      "category": "Biological Sample",
+      "collectedBy": "Phil Vanatter",
+      "collectedDate": 772262400000,
+      "locationID": "location_simpson_bedroom",
+      "status": "In Storage",
+      "condition": "Intact",
+      "relatedCrime": "crime_bundy_murders",
+      "associatedPersons": [
+        "person_oj_simpson",
+        "person_nicole_brown_simpson",
+        "person_ron_goldman"
+      ]
+    },
+    {
+      "id": "evidence_bloody_footprint",
+      "type": "EvidenceItem",
+      "name": "Bloody Footprint",
+      "description": "A bloody footprint matching O.J. Simpson's shoe size found at the crime scene.",
+      "color": "#A6808C",
+      "category": "Footprint",
+      "collectedBy": "Tom Lange",
+      "collectedDate": 772262400000,
+      "locationID": "location_bundy_drive",
+      "status": "In Storage",
+      "condition": "Intact",
+      "relatedCrime": "crime_bundy_murders",
+      "associatedPersons": [
+        "person_oj_simpson",
+        "person_nicole_brown_simpson",
+        "person_ron_goldman"
+      ]
+    },
+    {
+      "id": "evidence_bloody_bronco",
+      "type": "EvidenceItem",
+      "name": "Bloody Bronco",
+      "description": "Blood found inside O.J. Simpson's white Ford Bronco.",
+      "color": "#A6808C",
+      "category": "Biological Sample",
+      "collectedBy": "Tom Lange",
+      "collectedDate": 772348800000,
+      "locationID": "location_simpson_bronco",
+      "status": "In Storage",
+      "condition": "Intact",
+      "relatedCrime": "crime_bundy_murders",
+      "associatedPersons": [
+        "person_oj_simpson",
+        "person_nicole_brown_simpson",
+        "person_ron_goldman"
+      ]
+    },
+    {
+      "id": "evidence_dna_samples",
+      "type": "EvidenceItem",
+      "name": "DNA Samples",
+      "description": "DNA analysis of blood samples linking O.J. Simpson to the crime scene.",
+      "color": "#A6808C",
+      "category": "Biological Sample",
+      "collectedBy": "Marcia Clark",
+      "collectedDate": 772435200000,
+      "locationID": "location_bundy_drive",
+      "status": "Being Analyzed",
+      "condition": "Intact",
+      "relatedCrime": "crime_bundy_murders",
+      "associatedPersons": [
+        "person_oj_simpson",
+        "person_nicole_brown_simpson",
+        "person_ron_goldman"
+      ]
+    }
+
+
+  ],
+  "edges": [
+    {
+      "type": "Relationship",
+      "description": "Romantic relationship between O.J. Simpson and Nicole Brown Simpson, ending in divorce.",
+      "source": "person_oj_simpson",
+      "target": "person_nicole_brown_simpson",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "inactive",
+      "relationshipType": "romantic"
+    },
+    {
+      "type": "Relationship",
+      "description": "Friendship between Nicole Brown Simpson and Ron Goldman.",
+      "source": "person_nicole_brown_simpson",
+      "target": "person_ron_goldman",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "active",
+      "relationshipType": "friendship"
+    },
+    {
+      "type": "Relationship",
+      "description": "Rivalry between O.J. Simpson and Ron Goldman.",
+      "source": "person_oj_simpson",
+      "target": "person_ron_goldman",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "inactive",
+      "relationshipType": "rivalry"
+    },
+    {
+      "type": "Relationship",
+      "description": "Marcia Clark was a prosecutor against O.J. Simpson in the criminal trial.",
+      "source": "person_marcia_clark",
+      "target": "person_oj_simpson",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "inactive",
+      "relationshipType": "rivalry"
+    },
+    {
+      "type": "Relationship",
+      "description": "Mark Fuhrman was an investigator involved in collecting evidence on O.J. Simpson.",
+      "source": "person_mark_fuhrman",
+      "target": "person_oj_simpson",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "inactive",
+      "relationshipType": "criminal"
+    },
+    {
+      "type": "Relationship",
+      "description": "Robert Kardashian was a defense attorney and friend of O.J. Simpson.",
+      "source": "person_robert_kardashian",
+      "target": "person_oj_simpson",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "inactive",
+      "relationshipType": "alliance"
+    },
+    {
+      "type": "Relationship",
+      "description": "Nicole Brown Simpson and Kris Jenner were close friends.",
+      "source": "person_nicole_brown_simpson",
+      "target": "person_kris_jenner",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "active",
+      "relationshipType": "friendship"
+    },
+    {
+      "type": "Relationship",
+      "description": "O.J. Simpson and Kato Kaelin were housemates at the time of the murders.",
+      "source": "person_oj_simpson",
+      "target": "person_kato_kaelin",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "active",
+      "relationshipType": "friendship"
+    },
+    {
+      "type": "Relationship",
+      "description": "O.J. Simpson and Allan Park had a professional relationship.",
+      "source": "person_oj_simpson",
+      "target": "person_allan_park",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "active",
+      "relationshipType": "business"
+    },
+    {
+      "type": "Relationship",
+      "description": "O.J. Simpson and Arnelle Simpson had a family relationship.",
+      "source": "person_oj_simpson",
+      "target": "person_arnelle_simpson",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "active",
+      "relationshipType": "family"
+    },
+    {
+      "type": "Relationship",
+      "description": "O.J. Simpson and F. Lee Bailey had a professional relationship.",
+      "source": "person_oj_simpson",
+      "target": "person_f_lee_bailey",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "active",
+      "relationshipType": "business"
+    },
+    {
+      "type": "Relationship",
+      "description": "O.J. Simpson and Johnnie Cochran had a professional relationship.",
+      "source": "person_oj_simpson",
+      "target": "person_johnnie_cochran",
+      "validSourceTypes": ["Person"],
+      "validTargetTypes": ["Person"],
+      "metadata": {},
+      "status": "active",
+      "relationshipType": "business"
+    }
+  ,
+  {
+    "type": "Relationship",
+    "description": "Nicole Brown Simpson and Denise Brown were sisters.",
+    "source": "person_nicole_brown_simpson",
+    "target": "person_denise_brown",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Person"],
+    "metadata": {},
+    "status": "active",
+    "relationshipType": "family"
+  },
+  {
+    "type": "Relationship",
+    "description": "O.J. Simpson and Robert Shapiro had a professional relationship.",
+    "source": "person_oj_simpson",
+    "target": "person_robert_shapiro",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Person"],
+    "metadata": {},
+    "status": "active",
+    "relationshipType": "business"
+  },
+  {
+    "type": "Relationship",
+    "description": "O.J. Simpson and Tom Lange had a professional relationship.",
+    "source": "person_oj_simpson",
+    "target": "person_tom_lange",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Person"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "criminal"
+  },
+  {
+    "type": "Relationship",
+    "description": "O.J. Simpson and Phil Vanatter had a professional relationship.",
+    "source": "person_oj_simpson",
+    "target": "person_phil_vanatter",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Person"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "criminal"
+  },
+  {
+    "type": "Relationship",
+    "description": "Nicole Brown Simpson and Marcia Clark had a professional relationship.",
+    "source": "person_nicole_brown_simpson",
+    "target": "person_marcia_clark",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Person"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "business"
+  },
+  {
+    "type": "Relationship",
+    "description": "Nicole Brown Simpson and Christopher Darden had a professional relationship.",
+    "source": "person_nicole_brown_simpson",
+    "target": "person_christopher_darden",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Person"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "business"
+  },
+  {
+    "type": "Relationship",
+    "description": "O.J. Simpson and Christopher Darden had a professional relationship.",
+    "source": "person_oj_simpson",
+    "target": "person_christopher_darden",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Person"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "rivalry"
+  },
+  {
+    "type": "Link",
+    "description": "Nicole Brown Simpson lived at her condo.",
+    "source": "person_nicole_brown_simpson",
+    "target": "2",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "active",
+    "relationshipType": "residence"
+  },
+  {
+    "type": "Link",
+    "description": "Ron Goldman worked at Mezzaluna Restaurant.",
+    "source": "person_ron_goldman",
+    "target": "3",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "active",
+    "relationshipType": "employment"
+  },
+  {
+    "type": "Link",
+    "description": "O.J. Simpson lived at his house.",
+    "source": "person_oj_simpson",
+    "target": "1",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "active",
+    "relationshipType": "residence"
+  },
+  {
+    "type": "Link",
+    "description": "O.J. Simpson's trial took place at the Los Angeles County Superior Courthouse.",
+    "source": "person_oj_simpson",
+    "target": "5",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "legal"
+  },
+  {
+    "type": "Link",
+    "description": "Nicole Brown Simpson's children attended Brentwood School.",
+    "source": "person_nicole_brown_simpson",
+    "target": "9",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "active",
+    "relationshipType": "education"
+  },
+  {
+    "type": "Link",
+    "description": "Kato Kaelin heard thumps on Gretna Green Way.",
+    "source": "person_kato_kaelin",
+    "target": "10",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "active",
+    "relationshipType": "witness"
+  },
+  {
+    "type": "Link",
+    "description": "O.J. Simpson played golf at Brentwood Country Club.",
+    "source": "person_oj_simpson",
+    "target": "13",
+    "validSourceTypes": ["Person"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "active",
+    "relationshipType": "recreation"
+  },
+  {
+    "type": "Link",
+    "description": "The bloody glove was found at O.J. Simpson's property.",
+    "source": "evidence_bloody_glove",
+    "target": "1",
+    "validSourceTypes": ["EvidenceItem"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "found_at"
+  },
+  {
+    "type": "Link",
+    "description": "The blood trail was found on Bundy Drive.",
+    "source": "evidence_blood_trail",
+    "target": "2",
+    "validSourceTypes": ["EvidenceItem"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "found_at"
+  },
+  {
+    "type": "Link",
+    "description": "The bloody sock was found in O.J. Simpson's bedroom.",
+    "source": "evidence_bloody_sock",
+    "target": "1",
+    "validSourceTypes": ["EvidenceItem"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "found_at"
+  },
+  {
+    "type": "Link",
+    "description": "The bloody footprint was found on Bundy Drive.",
+    "source": "evidence_bloody_footprint",
+    "target": "2",
+    "validSourceTypes": ["EvidenceItem"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "found_at"
+  },
+  {
+    "type": "Link",
+    "description": "The bloody Bronco was found at O.J. Simpson's property.",
+    "source": "evidence_bloody_bronco",
+    "target": "1",
+    "validSourceTypes": ["EvidenceItem"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "found_at"
+  },
+  {
+    "type": "Link",
+    "description": "The DNA samples were collected from Bundy Drive.",
+    "source": "evidence_dna_samples",
+    "target": "2",
+    "validSourceTypes": ["EvidenceItem"],
+    "validTargetTypes": ["Location"],
+    "metadata": {},
+    "status": "inactive",
+    "relationshipType": "collected_from"
+  }
+  ]
+}

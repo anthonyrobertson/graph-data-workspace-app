@@ -2,18 +2,11 @@ const fs = require('fs').promises;
 const path = require('path');
 const Ajv = require('ajv');
 
-const metadataSchemaJson = require('../schemas/metadataSchema.json'); 
-const nodeTypeSchemaJson = require('../schemas/nodeTypeSchema.json'); 
-const edgeTypeSchemaJson = require('../schemas/edgeTypeSchema.json'); 
+const { getValidator, loadSchema, ajv } = require('./SchemaManager');
 
 const {BaseNode, BaseEdge} = require('../models/BaseModels');
 let nodeClasses = [], edgeClasses = []
 const utils = require('../utils/utils');
-
-const appAjvContext = new Ajv();
-const metadataSchema = appAjvContext.compile(metadataSchemaJson);
-const nodeTypeSchema = appAjvContext.compile(nodeTypeSchemaJson);
-const edgeTypeSchema = appAjvContext.compile(edgeTypeSchemaJson);
 
 let loadedDictionaries = {}
 let dictTypeSchemasMap = {}
@@ -37,8 +30,10 @@ async function loadDictionaryFromDirectory (dictionaryDir) {
     const nodeTypes = {}
     const edgeTypes = {}
 
+    // NOTE: this is a different instance of Ajv than the one in SchemaManager, this one is dictionary-specific
     const dictInstanceAjv = new Ajv();
-    dictInstanceAjv.addSchema(metadataSchemaJson);
+    const metadataSchemaJson = await loadSchema(path.join(__dirname, '../schemas/metadataSchema.json'));
+    dictInstanceAjv.addSchema(metadataSchemaJson); // registers the metadata schema for use by other schemas
 
     dictTypeSchemasMap[dictionaryDir] = {};
 
@@ -47,12 +42,13 @@ async function loadDictionaryFromDirectory (dictionaryDir) {
         dictTypeSchemasMap[dictionaryDir][it.$id] = dictInstanceAjv.compile(it);
     }
 
+    const nodeTypeSchemaValidator = await getValidator('nodeTypeSchema');
     nodeFiles.forEach(async (f) => {
         const nodeType = require(path.resolve(path.join(nodesDir,f)));
-        const isValid = nodeTypeSchema(nodeType);
+        const isValid = nodeTypeSchemaValidator(nodeType);
         if (!isValid) {
             console.log({node: nodeType, isValid})
-            console.log(appAjvContext.errorsText(nodeTypeSchema.errors))
+            console.log(appAjvContext.errorsText(nodeTypeSchemaValidator.errors))
             throw new Error(`Invalid properties for node: ${nodeType.$id}`);
         }
         // first pass is collecting all the schemas which might reference each other...
@@ -62,12 +58,13 @@ async function loadDictionaryFromDirectory (dictionaryDir) {
     })
     Object.values(nodeTypes).forEach(addToDictTypeSchemasMap);
 
+    const edgeTypeSchemaValidator = await getValidator('edgeTypeSchema');
     edgeFiles.forEach(async (f) => {
         const edgeType = require(path.resolve(path.join(edgesDir,f)));
-        const isValid = edgeTypeSchema(edgeType);
+        const isValid = edgeTypeSchemaValidator(edgeType);
         if (!isValid) {
             console.log({edge: edgeType, valid: isValid})
-            console.log(appAjvContext.errorsText(edgeTypeSchema.errors))
+            console.log(appAjvContext.errorsText(edgeTypeSchemaValidator.errors))
             throw new Error(`Invalid properties for edge: ${edgeType.name}`);
         }
         dictInstanceAjv.addSchema(edgeType);

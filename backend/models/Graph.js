@@ -1,17 +1,12 @@
 const path = require('path');
 const fs = require('fs').promises;
 
-const Ajv = require('ajv');
+const { getValidator, ajv } = require('../lib/SchemaManager');
 
 const {getDictionary} = require('../lib/DictionaryManager');
 const {getRandomString, loadJson} = require('../utils/utils');
 
-const graphSchemaJson = require('../schemas/graphSchema.json'); 
-const metadataSchemaJson = require('../schemas/metadataSchema.json'); 
-
-const graphAjvContext = new Ajv();
-graphAjvContext.compile(metadataSchemaJson);
-const graphSchema = graphAjvContext.compile(graphSchemaJson);
+const appAjvContext = ajv;
 
 
 class BaseGraph {
@@ -42,15 +37,18 @@ class BaseGraph {
 
     async loadGraphJsonFromFile(graphFilePath) {
         console.log('loading', graphFilePath)
+
+        const graphSchemaValidator = await getValidator('graphSchema');
+        // const metadataSchemaValidator = getValidator('metadataSchema');
+
         const graphJson = await loadJson(graphFilePath);
 
         // we validate the basic structure of the graph first, but not actually validating each node or edge as its type
-        const valid = graphSchema(graphJson);
-        console.log(`graph ${graphFilePath} itself is valid?`, valid)
+        const valid = graphSchemaValidator(graphJson);
+        console.log(`graph ${graphFilePath} itself is valid?`, valid);
         if (!valid) {
-            console.log(graphAjvContext.errorsText(graphSchema.errors))
-            throw graphAjvContext.errorsText(graphSchema.errors);
-            return false;
+            console.log(appAjvContext.errorsText(graphSchemaValidator.errors));
+            throw appAjvContext.errorsText(graphSchemaValidator.errors);
         }
 
         // TODO figure out where this should come from??? directory path seems janky

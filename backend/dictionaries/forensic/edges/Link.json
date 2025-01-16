@@ -10,7 +10,7 @@
       "target": { "type": "string", "description": "ID of a Location or Evidence Item Node" },
       "validSourceTypes": {
         "type": "array",
-        "const": ["EvidenceItem", "Event"]
+        "const": ["Person", "EvidenceItem", "Event"]
       },
       "validTargetTypes": {
         "type": "array",
