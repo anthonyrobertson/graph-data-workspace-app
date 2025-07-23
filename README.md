@@ -31,10 +31,9 @@ The UI will be up on port 3000
 There are examples of Dictionaries and Graphs that use them included here as an example. Each dictionary's *nodes* and *edges* directories contain JSON schema according to `schemas/nodeTypeSchema` and `schemas/edgeTypeSchema` respectively.
 
 The example graphs validate against `schemas/graphSchema` and are a combination of randomly generated data and plundered from other sources. 
-*** Examples are a work in in progress ***
 
 ### API Support
-Almost none yet beyond directly supporting the frontend, but there is a really simple update API
+This is mostly not built yet - beyond directly supporting the frontend, but there is a really simple update API:
 
 ```
 POST
@@ -42,7 +41,8 @@ curl -X POST -H "Content-Type: application/json" -d @test_update.json http://loc
 ```
 
 ### TODO & other directions
-* Better examples of graphs
+* load graphs into memory, enabling collaborative multi-user cases
+* Better example graphs
 * OpenAPI spec
 * improve the update API /graph/:filename/update
 * deveolop 'boards' - instances of a graph that may include annotations, updates, and 'state' data
@@ -54,6 +54,4 @@ Brainstorm:
 ### Notes
 
 Part of the motivation for this was to learn about JSONSchema and in reality was an exercise in impelmenting meta-types. Doing it with JSONSchema makes for some challenging syntax.
-
-
 
